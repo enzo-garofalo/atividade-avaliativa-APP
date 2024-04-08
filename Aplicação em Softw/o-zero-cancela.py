@@ -31,25 +31,12 @@ while num_atual >= 0:
         else:
             nums_desconsiderados += 1
             nums_considerados -= 1
-            
-            # if zero_consecutivo == 0:
-            #     soma -= num_anterior1
-                
-            
-            if zero_consecutivo == 1:
-                num_anterior1 = num_anterior2
-                num_anterior2 = num_anterior3
-                num_anterior3 = 0
-                       
 
-           
+            soma -= num_anterior1 
+            num_anterior1 = num_anterior2
+            num_anterior2 = num_anterior3
+            num_anterior3 = 0
 
-            elif zero_consecutivo == 2:
-                num_anterior1 = num_anterior2
-                num_anterior2 = 0
-              
-
-            soma -= num_anterior1  
             zero_consecutivo += 1 
                 
 if nums_considerados <=  0:
